@@ -1,14 +1,11 @@
 clear; clc; close all;
 addpath('algorithm');
-addpath('problem/CEC2014');
-addpath('problem/CEC2017');
-addpath('problem/CEC2020');
-addpath('problem/CEC2020RW');
+addpath('proposed');
 addpath('problem/CEC2021');
 addpath('problem/CEC2022');
 
 % Algorithm configuration
-algorithms = {'sos'};
+algorithms = {'boa'};
 
 % CPU çekirdek sayısını tespit et
 num_cores = feature('numcores');
@@ -35,12 +32,7 @@ end
 
 % List of all available experiments
 all_experiments = {
-    'cec2014_10', 'cec2014_30', 'cec2014_50', 'cec2014_100', ...
-    'cec2017_10', 'cec2017_30', 'cec2017_50', 'cec2017_100', ...
-    'cec2020_5', 'cec2020_10', 'cec2020_15', 'cec2020_20', ...
-    'cec2020rw', ...
-    'cec2021_10', 'cec2021_20', ...
-    'cec2022_10', 'cec2022_20'
+    'cec2021_20',
 };
 
 % Calculate total number of jobs for preallocation
