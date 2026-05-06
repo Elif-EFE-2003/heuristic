@@ -15,7 +15,7 @@
 clear; clc;
 
 % ------------------------- Configuration -------------------------
-algorithms   = {'boa', 'boaNew'}; % {A, B}: comparison direction is A vs B
+algorithms   = {'boaNew', 'boa'}; % {A, B}: comparison direction is A vs B
 base_dir     = 'results';          % root folder of saved runs
 alpha        = 0.05;               % significance level
 score_plus   = 5;                  % project score weight for '+' wins

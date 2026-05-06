@@ -5,7 +5,7 @@ addpath('problem/CEC2021');
 addpath('problem/CEC2022');
 
 % Algorithm configuration
-algorithms = {'boa'};
+algorithms = {'boaNew'};
 
 % CPU çekirdek sayısını tespit et
 num_cores = feature('numcores');
@@ -32,7 +32,8 @@ end
 
 % List of all available experiments
 all_experiments = {
-    'cec2021_20',
+    'cec2021_20', ...
+    'cec2022_10', 'cec2022_20'
 };
 
 % Calculate total number of jobs for preallocation
