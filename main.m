@@ -32,8 +32,7 @@ end
 
 % List of all available experiments
 all_experiments = {
-    'cec2021_20', ...
-    'cec2022_10', 'cec2022_20'
+    'cec2021_10','cec2021_20'
 };
 
 % Calculate total number of jobs for preallocation

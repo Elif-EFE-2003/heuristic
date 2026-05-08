@@ -5,7 +5,7 @@ addpath('problem/CEC2021');
 addpath('problem/CEC2022');
 
 % Algorithm configuration
-algorithms = {'sfs', 'fdb_sfs'};
+algorithms = {'boa', 'boaNew'};
 
 % CPU çekirdek sayısını tespit et
 num_cores = feature('numcores');
@@ -42,7 +42,7 @@ for exp_idx = 1:length(all_experiments)
     experiment_name = all_experiments{exp_idx};
     config = experiment_factory(experiment_name);
     config.runs_per_experiment = 21;
-    config.maxFE = 1;
+    
     
     jobs_for_this_exp = length(algorithms) * length(config.function_numbers) * config.runs_per_experiment;
     fprintf('  %s: %d algorithms x %d functions x %d runs = %d jobs\n', ...
@@ -61,7 +61,6 @@ for exp_idx = 1:length(all_experiments)
     experiment_name = all_experiments{exp_idx};
     config = experiment_factory(experiment_name);
     config.runs_per_experiment = 21;
-    config.maxFE = 1;
     
     for alg_idx = 1:length(algorithms)
         alg_name = algorithms{alg_idx};
